@@ -1,29 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CharTracker
 
-## Getting Started
+This is a custom character tracker web application for role-playing games, similar in look and feel to the Character creator on D&DBeyond.com. The application allows players to create and track the characters of their worlds.
 
-First, run the development server:
+## Project Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+CharTracker is a full-stack web application built with Next.js, Tailwind CSS, and PostgreSQL. It provides the following features:
+- Create a character with fields for Character Name, Race, Class, Abilities, Description, and Equipment.
+- View a dashboard for previously created characters with a dropdown to select characters.
+- Save all character data in a PostgreSQL database.
+- Navigate using a navbar with links to "Dashboard" and "Create a Character".
+- A footer with a simple message.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Setup Instructions
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Clone the repository:**
+   ```bash
+   git clone <repository-url>
+   cd chartracker
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Set up the PostgreSQL database:**
+   - Create a new PostgreSQL database and user.
+   - Update the `.env.local` file with the database credentials.
+
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+5. **Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.**
+
+## Usage Guidelines
+
+- **Create a Character:**
+  - Navigate to the "Create a Character" page using the navbar.
+  - Fill in the fields for Character Name, Race, Class, Abilities, Description, and Equipment.
+  - Submit the form to create a new character.
+
+- **View Dashboard:**
+  - Navigate to the "Dashboard" page using the navbar.
+  - Select a character from the dropdown to view its details.
+
+## Deployment
+
+The application is deployed on Vercel. You can access the deployed application at the following URL:
+[Deployed Application URL](https://chartracker-bsrv8xf6t-saraxiangs-projects.vercel.app)
 
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
-
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
