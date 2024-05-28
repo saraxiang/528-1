@@ -20,7 +20,9 @@ const DashboardPage = () => {
 
   const handleCharacterSelect = (e) => {
     const characterId = e.target.value;
-    const character = characters.find((char) => char.id === characterId);
+    console.log('Selected Character ID:', characterId);
+    const character = characters.find((char) => char.id === parseInt(characterId));
+    console.log('Selected Character:', character);
     setSelectedCharacter(character);
   };
 
