@@ -4,7 +4,7 @@ import { characters } from '../../../src/schema';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
-    const { name, race, class: characterClass, abilities, description, equipment } = req.body;
+    const { name, race, characterClass, abilities, description, equipment } = req.body;
 
     try {
       const client = await pool.connect();
