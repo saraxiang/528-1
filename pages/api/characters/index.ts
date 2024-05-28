@@ -22,8 +22,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       console.error('Error creating character:', error);
       res.status(500).json({ error: 'Internal Server Error' });
     }
+  } else if (req.method === 'GET') {
+    try {
+      const client = await pool.connect();
+      const query = 'SELECT * FROM characters';
+      const result = await client.query(query);
+      client.release();
+
+      res.status(200).json(result.rows);
+    } catch (error) {
+      console.error('Error fetching characters:', error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
   } else {
-    res.setHeader('Allow', ['POST']);
+    res.setHeader('Allow', ['POST', 'GET']);
     res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 }
