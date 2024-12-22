@@ -48,8 +48,8 @@ CharTracker is a full-stack web application built with Next.js, Tailwind CSS, an
 
 ## Deployment
 
-The application is deployed on Vercel. You can access the deployed application at the following URL:
-[Deployed Application URL](https://chartracker-bsrv8xf6t-saraxiangs-projects.vercel.app)
+The application is deployed on Vercel. You can access the deployed application here:
+- **Live Application:** [CharTracker](https://chartracker-bsrv8xf6t-saraxiangs-projects.vercel.app)
 
 ## Learn More
 
